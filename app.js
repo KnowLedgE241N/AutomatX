@@ -130,6 +130,10 @@ if (!prefersReducedMotion) {
       });
     });
 
+    if (steps[0]) {
+      steps[0].classList.add("is-visible");
+    }
+
     const positionTimeline = () => {
       if (!rail) return;
       const railRect = rail.getBoundingClientRect();
