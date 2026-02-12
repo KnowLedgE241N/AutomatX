@@ -62,7 +62,7 @@ exports.handler = async (event) => {
     };
 
     const resendApiKey = process.env.RESEND_API_KEY;
-    const toEmail = process.env.CONTACT_TO_EMAIL || "hello@automatx.co.uk";
+    const toEmail = process.env.CONTACT_TO_EMAIL || "zain.rahman@automatx.co.uk";
     const fromEmail = process.env.CONTACT_FROM_EMAIL || "AutomatX <onboarding@resend.dev>";
 
     if (resendApiKey) {

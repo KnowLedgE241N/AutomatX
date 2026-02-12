@@ -112,6 +112,7 @@
         const dots = timeline.querySelectorAll(".rail-dot");
         const steps = timeline.querySelectorAll(".timeline-step");
         const fill = timeline.querySelector(".rail-fill");
+        const railLine = timeline.querySelector(".rail");
         const rail = timeline.querySelector(".timeline-rail");
 
         // Precompute fill scale values so the bar lines up with each numbered dot.
@@ -189,11 +190,23 @@
             dot.style.top = `${y}px`;
           });
 
-          if (fill) {
+          if (fill && dots.length) {
+            const firstDotTop = parseFloat(dots[0].style.top || "0");
+            const lastDotTop = parseFloat(dots[dots.length - 1].style.top || "0");
+            const lineTop = Math.min(firstDotTop, lastDotTop);
+            const lineHeight = Math.max(Math.abs(lastDotTop - firstDotTop), 1);
+
+            if (railLine) {
+              railLine.style.top = `${lineTop}px`;
+              railLine.style.height = `${lineHeight}px`;
+            }
+            fill.style.top = `${lineTop}px`;
+            fill.style.height = `${lineHeight}px`;
+
             fillScales = [];
             dots.forEach((dot) => {
               const top = parseFloat(dot.style.top || "0");
-              const ratio = Math.max(Math.min((top - padTop) / innerHeight, 1), 0);
+              const ratio = Math.max(Math.min((top - lineTop) / lineHeight, 1), 0);
               fillScales.push(ratio);
             });
             if (setFillScale && fillScales[0] != null) {

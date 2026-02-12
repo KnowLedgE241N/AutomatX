@@ -252,6 +252,7 @@ body::before {
   border: 1px solid rgba(111, 73, 153, 0.2);
   border-radius: 12px;
   background: #ffffff;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
@@ -274,10 +275,12 @@ body::before {
 
 .nav-toggle.is-open span:nth-child(2) {
   opacity: 0;
+  transform: none;
 }
 
 .nav-toggle.is-open span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
+  opacity: 1;
 }
 
 .hero-content {
@@ -1960,7 +1963,9 @@ body::before {
   align-items: start;
   text-align: left;
   max-width: 1040px;
+  width: 100%;
   margin: 0 auto;
+  min-width: 0;
 }
 
 .contact-form p {
@@ -2017,6 +2022,7 @@ body::before {
   gap: 18px;
   width: 100%;
   max-width: 560px;
+  min-width: 0;
 }
 
 .form-card label {
@@ -2036,6 +2042,8 @@ body::before {
   font-size: 0.95rem;
   color: var(--ink);
   background: #ffffff;
+  width: 100%;
+  min-width: 0;
 }
 
 .form-card textarea {
@@ -2273,10 +2281,28 @@ body::before {
 
   .page-hero {
     grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 92px 6vw 56px;
   }
 
   .faq-hero {
     grid-template-columns: 1fr;
+  }
+
+  .page-hero.alt-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-card,
+  .cta-box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
   }
 
   .page-grid {
@@ -2418,15 +2444,19 @@ body::before {
 
 
   .timeline {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) 84px;
+    gap: 18px;
   }
 
   .timeline-rail {
-    position: relative;
-    top: 0;
-    height: 320px;
-    width: 100%;
-    margin: 20px auto 0;
+    position: sticky;
+    top: 118px;
+    height: 58vh;
+    min-height: 360px;
+    width: 84px;
+    margin: 0;
+    padding: 0;
+    justify-self: end;
   }
 
 
@@ -2453,6 +2483,8 @@ body::before {
 
   .contact-form {
     grid-template-columns: 1fr;
+    max-width: none;
+    width: 100%;
   }
 
   .footer {
@@ -2545,9 +2577,7 @@ body::before {
   .nav-links.open > *:nth-child(8) { transition-delay: 0.16s; }
 
   .nav-cta {
-    grid-column: 1 / -1;
-    justify-self: start;
-    margin-top: 6px;
+    display: none;
   }
 
   .dropdown-menu {
@@ -2580,6 +2610,26 @@ body::before {
     padding: 30px 6vw 60px;
   }
 
+  .subpage .page-hero {
+    max-width: none;
+  }
+
+  .page-hero {
+    padding: 82px 6vw 48px;
+    gap: 18px;
+    overflow: visible;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(1.85rem, 9vw, 2.35rem);
+    line-height: 1.12;
+  }
+
+  .page-hero p {
+    font-size: 0.97rem;
+    line-height: 1.6;
+  }
+
   .hero-text h1 {
     font-size: clamp(2.2rem, 9vw, 3.2rem);
   }
@@ -2606,6 +2656,45 @@ body::before {
 
   .testimonial-slider {
     min-height: 380px;
+  }
+
+  .form-card.form-box {
+    max-width: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .contact-form,
+  .contact-structure {
+    min-width: 0;
+  }
+
+  .form-card label {
+    min-width: 0;
+  }
+
+  .timeline {
+    grid-template-columns: minmax(0, 1fr) 70px;
+    gap: 12px;
+  }
+
+  .timeline-rail {
+    top: 102px;
+    min-height: 300px;
+    height: 52vh;
+    width: 70px;
+    padding: 0;
+  }
+
+  .timeline-rail .rail-dot {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+
+  .timeline-rail .rail-dot.active {
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 4px rgba(143, 40, 255, 0.15);
   }
 }
 
