@@ -52,13 +52,62 @@ exports.handler = async (event) => {
       };
     }
 
-    console.log("Contact form submission", {
+    const submission = {
       name,
       email,
       subject,
       interest,
-      messageLength: message.length,
+      message,
       createdAt: new Date().toISOString(),
+    };
+
+    const resendApiKey = process.env.RESEND_API_KEY;
+    const toEmail = process.env.CONTACT_TO_EMAIL || "hello@automatx.co.uk";
+    const fromEmail = process.env.CONTACT_FROM_EMAIL || "AutomatX <onboarding@resend.dev>";
+
+    if (resendApiKey) {
+      const emailSubject = subject || `New website inquiry from ${name}`;
+      const emailText = [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Interest: ${interest || "Not specified"}`,
+        "",
+        "Message:",
+        message,
+      ].join("\n");
+
+      const resendResponse = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${resendApiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: fromEmail,
+          to: [toEmail],
+          reply_to: email,
+          subject: emailSubject,
+          text: emailText,
+        }),
+      });
+
+      if (!resendResponse.ok) {
+        const resendError = await resendResponse.text();
+        console.error("Resend delivery failed", resendError);
+        return {
+          statusCode: 502,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: "Message received, but delivery failed. Please email hello@automatx.co.uk directly." }),
+        };
+      }
+    } else {
+      console.warn("RESEND_API_KEY not configured; submission logged only.");
+    }
+
+    console.log("Contact form submission", {
+      ...submission,
+      messageLength: submission.message.length,
+      message: undefined,
     });
 
     return {

@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -26,7 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 
   <script id="seo-schema" type="application/ld+json">
-{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://automatx.co.uk/#organization", "name": "AutomatX", "url": "https://automatx.co.uk", "logo": "https://automatx.co.uk/LogoTitleSide.png", "email": "hello@automatx.com"}, {"@type": "WebPage", "@id": "https://automatx.co.uk/contact.html#webpage", "url": "https://automatx.co.uk/contact.html", "name": "Contact | AutomatX", "description": "Contact AutomatX to start your automation project and get a tailored plan within 48 hours.", "isPartOf": {"@id": "https://automatx.co.uk/#website"}}, {"@type": "WebSite", "@id": "https://automatx.co.uk/#website", "url": "https://automatx.co.uk", "name": "AutomatX"}]}
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://automatx.co.uk/#organization", "name": "AutomatX", "url": "https://automatx.co.uk", "logo": "https://automatx.co.uk/LogoTitleSide.png", "email": "hello@automatx.co.uk"}, {"@type": "WebPage", "@id": "https://automatx.co.uk/contact.html#webpage", "url": "https://automatx.co.uk/contact.html", "name": "Contact | AutomatX", "description": "Contact AutomatX to start your automation project and get a tailored plan within 48 hours.", "isPartOf": {"@id": "https://automatx.co.uk/#website"}}, {"@type": "WebSite", "@id": "https://automatx.co.uk/#website", "url": "https://automatx.co.uk", "name": "AutomatX"}]}
 </script>
 </head>
 <body class="subpage">
@@ -78,12 +78,27 @@
   <main id="main-content">
     <section class="section">
       <div class="contact-form">
-        <div>
+        <div class="contact-structure">
           <div class="section-label">CONTACT</div>
           <h1>Tell us your automation goals</h1>
           <p>Send a quick note and we'll get back within one business day.</p>
+          <div class="contact-notes">
+            <article class="contact-note">
+              <h3>Response time</h3>
+              <p>Most inquiries receive a reply within 24 business hours.</p>
+            </article>
+            <article class="contact-note">
+              <h3>What to include</h3>
+              <p>Current tools, main bottleneck, and what outcome you want first.</p>
+            </article>
+            <article class="contact-note">
+              <h3>Direct email</h3>
+              <p><a href="mailto:hello@automatx.co.uk">hello@automatx.co.uk</a></p>
+            </article>
+          </div>
         </div>
         <form class="form-card form-box" id="contact-form">
+          <input type="hidden" name="sourcePage" value="contact.html" />
           <label>
             <span class="sr-only">Name</span>
             <input type="text" name="name" maxlength="35" placeholder="Name" required />
@@ -116,11 +131,30 @@
             <span class="field-meta">0 of 120 max characters.</span>
           </label>
           <div class="captcha-box captcha-real">
-            <div class="g-recaptcha" data-sitekey="6Lc5x2UsAAAAABFFDNM3bNcKVKeDesqaI4coyrsu"></div>
+            <div class="g-recaptcha" data-sitekey="6LfzzWgsAAAAAJwpAnc7jJ5Lqqi5V84P_EcSiMvV"></div>
           </div>
           <button class="primary form-submit" type="submit">Send Message</button>
           <p class="form-status" id="form-status" aria-live="polite"></p>
         </form>
+      </div>
+    </section>
+
+    <section class="section contact-next-steps">
+      <div class="section-label">NEXT STEPS</div>
+      <h2>What happens after you submit</h2>
+      <div class="page-grid" style="margin-top: 28px;">
+        <article class="panel">
+          <h3>1. Review</h3>
+          <p>We review your message and map your request to the right specialist.</p>
+        </article>
+        <article class="panel">
+          <h3>2. Scope</h3>
+          <p>You receive a short plan with recommended first automations and timeline.</p>
+        </article>
+        <article class="panel">
+          <h3>3. Kickoff</h3>
+          <p>We confirm requirements and begin implementation with clear milestones.</p>
+        </article>
       </div>
     </section>
   </main>
@@ -140,7 +174,7 @@
       <a href="contact.html">Contact</a>
     </div>
     <div class="footer-meta">
-      <span>hello@automatx.com</span>
+      <span>hello@automatx.co.uk</span>
       <span>+1 (555) 210-9842</span>
       <span>Remote - Global</span>
     </div>

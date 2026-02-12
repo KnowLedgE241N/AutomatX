@@ -395,6 +395,12 @@ body::before {
   overflow: hidden;
 }
 
+.subpage .page-hero {
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .page-hero::after {
   content: "";
   position: absolute;
@@ -1603,6 +1609,17 @@ body::before {
   line-height: 1.6;
 }
 
+.faq-hero {
+  grid-template-columns: minmax(320px, 560px) minmax(260px, 380px);
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.faq-content .faq-list {
+  max-width: 1120px;
+}
+
 .service-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(160px, 1fr));
@@ -1938,15 +1955,50 @@ body::before {
 
 .contact-form {
   display: grid;
-  grid-template-columns: minmax(260px, 360px) minmax(280px, 520px);
-  gap: 40px;
+  grid-template-columns: minmax(280px, 380px) minmax(320px, 560px);
+  gap: 32px;
   align-items: start;
   text-align: left;
+  max-width: 1040px;
+  margin: 0 auto;
 }
 
 .contact-form p {
   color: var(--muted);
   line-height: 1.6;
+}
+
+.contact-structure {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-notes {
+  display: grid;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.contact-note {
+  background: #ffffff;
+  border: 1px solid rgba(111, 73, 153, 0.14);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.contact-note h3 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.contact-note p {
+  font-size: 0.92rem;
+}
+
+.contact-note a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .form-card {
@@ -1963,7 +2015,8 @@ body::before {
 .form-card.form-box {
   padding: 28px;
   gap: 18px;
-  max-width: 520px;
+  width: 100%;
+  max-width: 560px;
 }
 
 .form-card label {
@@ -2057,6 +2110,12 @@ body::before {
 .form-submit {
   justify-self: start;
   min-width: 200px;
+}
+
+.contact-next-steps .page-grid {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-status {
@@ -2213,6 +2272,10 @@ body::before {
   }
 
   .page-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-hero {
     grid-template-columns: 1fr;
   }
 
