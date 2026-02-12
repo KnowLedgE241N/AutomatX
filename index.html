@@ -1,39 +1,55 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Automations Solutions</title>
-  <meta name="description" content="Automation solutions designed for revenue operations, support, and back?office workflows." />
-  <meta property="og:title" content="Automations Solutions" />
-  <meta property="og:description" content="Automation solutions designed for revenue operations, support, and back?office workflows." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#8f28ff" />
+  <title>AutomatX | Software Automation Solutions</title>
+  <meta name="description" content="Automation solutions designed for revenue operations, support, and back-office workflows." />
+  <meta property="og:title" content="AutomatX | Software Automation Solutions" />
+  <meta property="og:description" content="Automation solutions designed for revenue operations, support, and back-office workflows." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="hero.png" />
+  <meta property="og:site_name" content="AutomatX" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:url" content="https://automatx.co.uk/" />
+  <meta property="og:image" content="https://automatx.co.uk/hero.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Automations Solutions" />
-  <meta name="twitter:description" content="Automation solutions designed for revenue operations, support, and back?office workflows." />
-  <meta name="twitter:image" content="hero.png" />
+  <meta name="twitter:title" content="AutomatX | Software Automation Solutions" />
+  <meta name="twitter:description" content="Automation solutions designed for revenue operations, support, and back-office workflows." />
+  <meta name="twitter:image" content="https://automatx.co.uk/hero.png" />
 
+  <link rel="canonical" href="https://automatx.co.uk/" />
   <link rel="icon" href="favicon (6).ico" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script id="seo-schema" type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://automatx.co.uk/#organization", "name": "AutomatX", "url": "https://automatx.co.uk", "logo": "https://automatx.co.uk/LogoTitleSide.png", "email": "hello@automatx.com"}, {"@type": "WebPage", "@id": "https://automatx.co.uk/#webpage", "url": "https://automatx.co.uk/", "name": "AutomatX | Software Automation Solutions", "description": "Automation solutions designed for revenue operations, support, and back-office workflows.", "isPartOf": {"@id": "https://automatx.co.uk/#website"}}, {"@type": "WebSite", "@id": "https://automatx.co.uk/#website", "url": "https://automatx.co.uk", "name": "AutomatX"}]}
+</script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="hero">
     <div class="hero-bg" aria-hidden="true"></div>
     <nav class="nav">
       <div class="brand">
-        <img src="LogoTitleSide.png" alt="Automations Solutions" class="brand-logo" />
+        <img src="LogoTitleSide.png" alt="AutomatX" class="brand-logo"  width="250" height="250" decoding="async" />
 
       </div>
-      
+
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <div class="nav-links">
         <a href="index.html">Home</a>
         <div class="nav-item dropdown">
           <button class="dropdown-toggle" type="button">Services<span class="caret"></span></button>
-          <div class="dropdown-menu">
-            <a href="services.html">Services Hub</a>
-            <a href="service-automation.html">Automate Manual Work</a>
+          <div class="dropdown-menu">            <a href="service-automation.html">Automate Manual Work</a>
             <a href="service-analytics.html">Dashboards & Reporting</a>
             <a href="service-ai.html">AI for Customer Support</a>
             <a href="service-integrations.html">Connect Your Tools</a>
@@ -43,17 +59,15 @@
 
         <div class="nav-item dropdown">
           <button class="dropdown-toggle" type="button">Solutions<span class="caret"></span></button>
-          <div class="dropdown-menu">
-            <a href="solutions.html">Solutions Hub</a>
-            <a href="solution-small-business.html">For Small Businesses</a>
+          <div class="dropdown-menu">            <a href="solution-small-business.html">For Small Businesses</a>
             <a href="solution-agencies.html">For Agencies</a>
             <a href="solution-ecommerce.html">For E-commerce</a>
             <a href="solution-healthcare.html">For Healthcare / Clinics</a>
             <a href="solution-nonprofits.html">For Mosques / Non-profits</a>
           </div>
         </div>
-        <a href="about.html">About</a>
         <a href="how-it-works.html">How It Works</a>
+        <a href="about.html">About</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -87,7 +101,7 @@
     </section>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="section" id="solutions">
       <div class="section-label">OUR SOLUTIONS</div>
       <h2>Elevating Your Business Performance</h2>
@@ -180,13 +194,38 @@
 
     <section class="testimonials" id="clients">
       <div class="section-label light">CLIENT TESTIMONIALS</div>
-      <blockquote>
-        “We highly recommend AutomatX for their exceptional AI integration services,
-        which have elevated our business performance and customer engagement
-        significantly.”
-      </blockquote>
+      <div class="testimonial-slider" aria-live="polite">
+        <article class="testimonial-slide is-active">
+          <blockquote>
+            "We highly recommend AutomatX for their exceptional AI integration services,
+            which have elevated our business performance and customer engagement significantly."
+          </blockquote>
+          <span class="testimonial-byline">Founder, Northline Growth Co.</span>
+        </article>
+        <article class="testimonial-slide">
+          <blockquote>
+            "Their automation around lead routing and follow-up removed hours of manual admin every week."
+          </blockquote>
+          <span class="testimonial-byline">Operations Manager, Harbor Lane Digital</span>
+        </article>
+        <article class="testimonial-slide">
+          <blockquote>
+            "Our support inbox went from reactive to structured in under a month. Response quality improved fast."
+          </blockquote>
+          <span class="testimonial-byline">Head of Support, EmberCart Studios</span>
+        </article>
+        <article class="testimonial-slide">
+          <blockquote>
+            "The dashboard visibility gave leadership confidence because we finally had one reliable source of truth."
+          </blockquote>
+          <span class="testimonial-byline">Director, Beacon Community Trust</span>
+        </article>
+      </div>
       <div class="pager">
-        <span></span><span></span><span></span>
+        <span class="is-active" data-index="0"></span>
+        <span data-index="1"></span>
+        <span data-index="2"></span>
+        <span data-index="3"></span>
       </div>
     </section>
 
@@ -205,39 +244,26 @@
     <div class="footer-brand">
       <strong>AutomatX</strong>
       <span>Automation studio for modern operations.</span>
-      <span>? 2026 AutomatX. All rights reserved.</span>
+      <span>2026 AutomatX. All rights reserved.</span>
     </div>
     <div class="footer-links">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
+      <a href="how-it-works.html">How It Works</a>
       <a href="about.html">About</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="faq.html">FAQ</a>
+      <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
     </div>
     <div class="footer-meta">
       <span>hello@automatx.com</span>
       <span>+1 (555) 210-9842</span>
-      <span>Remote ? Global</span>
+      <span>Remote - Global</span>
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="app.js"></script>
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/698151256273081c3ac0c826/1jggi9v4q';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
-  <!--End of Tawk.to Script-->
-
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="app.js"></script>
 </body>
 </html>
+

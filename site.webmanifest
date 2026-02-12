@@ -1,0 +1,15 @@
+{
+  "name": "AutomatX",
+  "short_name": "AutomatX",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f1ff",
+  "theme_color": "#8f28ff",
+  "icons": [
+    {
+      "src": "favicon (6).ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
